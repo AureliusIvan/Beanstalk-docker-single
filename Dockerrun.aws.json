@@ -6,7 +6,7 @@
     "Update": "true"
   },
   "Authentication": {
-    "Bucket": "ivan-docker.s3.us-east-1.amazonaws.com",
+    "Bucket": "ivan-docker",
     "Key": "ivan-docker/docker-auth.json"
   },
   "Ports": [
