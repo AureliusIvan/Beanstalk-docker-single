@@ -7,7 +7,7 @@
   },
   "Authentication": {
     "Bucket": "ivan-docker",
-    "Key": "ivan-docker/docker-auth.json"
+    "Key": "docker-auth.json"
   },
   "Ports": [
     {
