@@ -2,6 +2,16 @@
   "AWSEBDockerrunVersion": "1",
   "Logging": "/tmp/sample-app",
   "Image": {
-  	"Update": "false"
-  }
+    "Name": "058264163083.dkr.ecr.us-east-1.amazonaws.com/python/backendrepo:latest",
+    "Update": "true"
+  },
+  "Authentication": {
+    "Bucket": "ivan-docker.s3.us-east-1.amazonaws.com",
+    "Key": "ivan-docker/docker-auth.json"
+  },
+  "Ports": [
+    {
+      "ContainerPort": 8000
+    }
+  ]
 }

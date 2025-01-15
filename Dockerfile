@@ -1,9 +1,18 @@
-FROM public.ecr.aws/docker/library/python:3.8
+# Use Python 3.12 as the base image
+FROM python:3.12-slim
 
-# Add sample application
-ADD application.py /tmp/application.py
+# Set working directory
+WORKDIR /app
 
+# Copy application and requirements files
+ADD application.py /app/application.py
+ADD requirements.txt /app/requirements.txt
+
+# Install dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Expose the application port
 EXPOSE 8000
 
-# Run it
-ENTRYPOINT ["python", "/tmp/application.py"]
+# Run the FastAPI application
+ENTRYPOINT ["uvicorn", "application:app", "--host", "0.0.0.0", "--port", "8000"]
