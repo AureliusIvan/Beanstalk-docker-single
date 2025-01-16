@@ -1,0 +1,9 @@
+.git
+.venv
+__pycache__
+*.pyc
+.ebextensions
+.elasticbeanstalk
+docker-auth.json
+Dockerrun.aws.json
+README.md
